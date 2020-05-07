@@ -1,0 +1,442 @@
+@charset "UTF-8";
+
+/*ユーザー側画面TOPページ（index.php）のcss*/
+
+/*--------------------------------------------------*/
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+
+#mainwrap
+{
+	width:100%;
+	text-align:center;
+}
+
+.top-innerspace
+{
+    padding: 30px 24px;
+}
+#top-main-pc
+{
+	width:100%;
+	display:none;
+}
+#top-main-sp
+{
+	width:100%;
+}
+#top-main-regist-btn
+{
+	position: relative;
+}
+#top-main-regist-btn a
+{
+	display:block;
+	width:100%;
+	background-color:navy;
+	padding:15px 0;
+}
+#top-main-regist-btn a:hover
+{
+	background-color:blue;
+	transition: .3s ease-in-out;
+
+}
+
+
+#top-bg
+{
+	background-image: url('../img/topbg.png');
+	background-size: cover;
+	background-position: center;
+	width:100%;
+    padding-bottom: 50px;
+}
+.top-catch
+{
+	margin-bottom:50px;
+	text-align: center;
+	font-weight:bolder;
+    letter-spacing: 2px;
+}
+
+.top-catch-sub
+{
+	font-size:0.8em;
+	margin-bottom:5px;
+}
+
+.top-catch-main
+{
+	font-size:2em;
+}
+
+.searchbox
+{
+	margin:0 10px;
+}
+
+.list-hr
+{
+	margin:20px auto;
+}
+
+.search-clear-btn-wrap
+{
+	display:none;
+}
+
+.search-title
+{
+	padding:2px;
+	border-radius:3px;
+	margin:14px;
+	width:100px;
+	height:20px;
+	text-align:center;
+	color: white;
+    font-weight: bold;
+}
+
+input[type=radio],input[type=checkbox]
+{
+  display: none;
+}
+
+.check_css
+{
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 42px;
+  vertical-align: middle;
+  cursor: pointer;
+  width:100px;
+}
+
+.check_css:hover:after
+{
+  border-color: #0171bd;
+}
+
+.check_css:after
+{
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  display: block;
+  margin-top: -10px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  content: '';
+}
+
+.check_css:before
+{
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 21px;
+  display: block;
+  margin-top: -7px;
+  width: 5px;
+  height: 9px;
+  border-right: 3px solid #0171bd;
+  border-bottom: 3px solid #0171bd;
+  content: '';
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+input[type=radio]:checked + .check_css:before,input[type=checkbox]:checked + .check_css:before
+{
+  opacity: 1;
+}
+
+.freeword
+{
+	border:1px #2b4c72 solid;
+	text-indent: 1em;
+	width:100%;
+	height:50px;
+}
+
+.freeword::placeholder
+{
+    text-align:left;
+}
+
+.searchbtn
+{
+	font-size:1.1em;
+	font-weight:bold;
+	width:100%;
+	height:82px;
+}
+.searchbtn:hover
+{
+    transition: .3s ease-in-out;
+    opacity: 0.7;
+}
+
+.searchbtn:before
+{
+	content: "";
+	display: inline-block;
+	width: 82px;
+	height: 82px;
+	background-image: url('../img/searchmark.png');
+	background-size: contain;
+	vertical-align: middle;
+}
+
+.searcharrow
+{
+    color: #FFF;
+    position: relative;
+    padding-right: 32px;
+}
+.searcharrow2
+{
+	position: relative;
+	padding-right: 11px;
+}
+.searcharrow:after, .searcharrow2:after
+{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 0;
+    height: 0;
+    margin-top: -0.5em;
+    border: 8px solid transparent;
+    border-left: 14px solid #fff;
+}
+
+.top-main
+{
+	margin:20px auto;
+}
+
+.service
+{
+   margin:30px 0;
+}
+
+#top-form
+{
+	width: 100%;
+    margin: 0 auto;
+}
+
+#top-form img
+{
+	max-width:100%;
+}
+
+.service p
+{
+	word-break:normal;
+}
+
+.btn-space
+{
+	margin:50px auto;
+}
+
+.projectbtn-space
+{
+	margin:20px auto;
+}
+
+.projectbtn
+{
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+
+.projectbtn:hover
+{
+    transition: .3s ease-in-out;
+    opacity: 0.7;
+}
+
+.projectbtn a
+{
+	display: block;
+    font-weight: bold;
+}
+
+.clear-btn
+{
+    border: solid 2px #009999;
+}
+
+.clear-btn:hover
+{
+    color: #fff;
+    background-color: #009999;
+}
+
+.top-main-end
+{
+	margin-bottom:0px;
+}
+
+
+
+/*--------------------------------------------------*/
+/*↓タブレット用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (min-width:768px)
+{
+	.top-main
+	{
+		margin:50px auto;
+	}
+
+	#top-main-pc
+	{
+		width:100%;
+		display:block;
+	}
+	#top-main-sp
+	{
+		display:none;
+	}
+
+	.top-innerspace
+	{
+	    padding: 60px 24px;
+	}
+
+	.top-catch-sub
+	{
+		font-size:1.3em;
+		margin-bottom:5px;
+	}
+
+	.top-catch-main
+	{
+		font-size:3.5em;
+	}
+
+	#top-bg
+	{
+	   	padding-bottom: 100px;
+	}
+
+	.searchbox
+	{
+		margin:0 45px;
+	}
+
+	.search-clear-btn-wrap
+	{
+		display:block;
+		text-align:right;
+	}
+
+	.freewordbtn
+	{
+		font-size:x-large;
+	}
+
+	.freewordbtn::placeholder
+	{
+	    text-align:left;
+	    font-size:large;
+	}
+
+	.searcharrow
+	{
+		padding-right: 56px;
+	}
+
+	.searcharrow3
+	{
+		padding-left:16px;
+	}
+
+	.searchbtn
+	{
+		font-size:2em;
+	}
+
+	.searcharrow:after, .searcharrow2:after
+	{
+		margin-top: -0.35em;
+		border: 10px solid transparent;
+		border-left: 15px solid #fff;
+	}
+
+	.service
+	{
+		width: 25%;
+	    text-align: center;
+	    vertical-align: middle;
+	    float: left;
+	}
+
+	.top-img
+	{
+		width:100%;
+		margin:15px auto;
+	}
+
+	.service p
+	{
+		padding:15px;
+	}
+
+	.projectbtn
+	{
+		width: 50%;
+		font-size:large;
+		padding: 16px 0;
+	}
+
+	.project
+	{
+		float:left;
+		width:50%;
+	}
+
+	.top-main-end
+	{
+		margin-bottom:0px;
+	}
+
+
+
+
+}
+/*--------------------------------------------------*/
+/*↓PC用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (min-width:920px)
+{
+
+
+
+
+/*---------------------------------------------*/
+}
+
+
+
+
+
+
+

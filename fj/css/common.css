@@ -1,0 +1,1235 @@
+@charset "UTF-8";
+
+/*ユーザー側画面共通css*/
+
+/*--------------------------------------------------*/
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+
+
+* /*全体初期化*/
+{
+	list-style: none;
+	margin: 0; /*0 auto*/
+	padding: 0;
+}
+
+body
+{
+    font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+img
+{
+	border: 0;
+	vertical-align: text-bottom;
+}
+
+a
+{
+	color: black;
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: none;
+}
+
+
+.clear
+{
+	clear:both;
+}
+
+.innerspace /*内側のスペース*/
+{
+	padding: 30px 16px;
+}
+
+.space /*コンテンツ間のスペース*/
+{
+	height: 20px;
+}
+
+.space40 /*コンテンツ間のスペース*/
+{
+	height: 40px;
+}
+
+.space50 /*コンテンツ間のスペース*/
+{
+	height: 50px;
+}
+
+
+/* --- 共通色 --- */
+
+.color-white
+{
+	color:#fff;
+}
+
+.color-red
+{
+	color:rgb(255, 0, 59);
+}
+
+.color-bluegreen
+{
+	color:rgb(0, 153, 153);
+}
+
+.color-darkblue
+{
+	color:rgb(43, 76, 114);
+}
+.color-orange
+{
+	color:rgba(224, 160, 1, 0.9607843137254902);
+}
+.color-yellow
+{
+	color:rgb(203, 188, 23);
+}
+.color-member
+{
+	color:rgb(232, 5, 58);
+}
+/* --- 共通背景色 --- */
+
+.bg-white
+{
+	background-color:#fff;
+}
+
+.bg-gray
+{
+ 	background-color:rgba(6,8,56,0.19);
+}
+
+.bg-rightgray
+{
+	background-color:rgb(224, 223, 223);
+}
+
+.bg-bluegray
+{
+	background-color:rgba(0, 0, 255, 0.34901960784313724);
+}
+
+.bg-darkblue
+{
+	background-color:rgb(43, 76, 114);
+}
+
+.bg-pink
+{
+	background-color:rgb(217, 83, 98);
+}
+
+.bg-red
+{
+ 	background-color:rgb(202, 32, 40);
+}
+.bg-rightred
+{
+	background-color: rgb(255, 0, 0);
+}
+
+.bg-skyblue
+{
+	background-color:rgb(135, 206, 235);
+}
+
+.bg-bluegreen
+{
+	background-color:rgb(0, 153, 153);
+}
+
+.bg-rightblue
+{
+background-color: rgb(88, 175, 197);
+}
+
+.bg-yellow
+{
+	background-color:rgb(203, 188, 23);
+}
+.bg-orange
+{
+	background-color:rgba(224, 160, 1, 0.9607843137254902);
+}
+
+
+
+/* --- ボタン共通 --- */
+
+.reset-btn
+{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+
+.btn
+{
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.btn:hover
+{
+	cursor: pointer;
+	cursor: hand;
+}
+
+.form-btn
+{
+	width:100%;
+    border-radius: 10px;
+    padding:20px 0;
+}
+
+.form-btn span
+{
+	display: block;
+    font-weight: bold;
+    font-size:large;
+}
+
+.form-btn:hover
+{
+	transition: .3s ease-in-out;
+	opacity: 0.7;
+}
+
+/* 点滅 */
+.blink
+{
+	animation:BLINK 1.0s ease-in-out infinite alternate;
+}
+@keyframes BLINK
+{
+	0%{opacity:1.0;}
+	100% {opacity:0;}
+}
+/* 新着表示 */
+.new_entry {
+	font-weight:bold;
+
+}
+.new-stamp{
+	 position: relative;
+	 overflow:hidden;
+}
+
+.new-stamp:before
+{	
+	border-color: #cc0080 transparent transparent transparent;
+	border-style: solid;
+	border-width: 50px 50px 0 0;
+	content: "";
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	z-index: 2;
+}
+.new-stamp:after
+{
+    color: #fff;
+    content: "NEW";
+    font-size: 12px;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    transform: rotate(-45deg);
+    font-weight: bold;
+    z-index: 3;
+}
+
+/*--------------------------------------------------*/
+/* ページ全体 */
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+#mainwrap
+{
+	width:100%;
+	background-image:url(../img/content_bg.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	-moz-background-size:cover;
+	background-size:cover;
+}
+/*--------------------------------------------------*/
+/* ページ全体 */
+/*↓タブレット用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (min-width:768px)
+{
+
+	.innerspace /*内側のスペース*/
+	{
+		padding: 30px 24px;
+	}
+	#mainwrap
+	{
+	  min-height: calc(100vh - 246px);  /* ヘッダー90px + フッター156 = 246px*/
+	}
+	.form-btn span
+	{
+	    font-size:x-large;
+	}
+
+}
+
+
+/*--------------------------------------------------*/
+/* ナビゲーション */
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+
+.nav
+{
+	color:black;
+    transition: .3s;
+}
+
+.nav-contact
+{
+	text-align:center;
+	padding:5px 0;
+	font-weight: bold;
+	font-size:small;
+}
+
+#navi-pc
+{
+	display:none;
+}
+
+.contentsbox
+{
+	text-align:center;
+}
+
+/*-----↓↓↓ハンバーガー↓↓↓------*/
+
+#nav-drawer
+{
+  position: relative;
+}
+
+
+.nav-unshown /*チェックボックス等は非表示に*/
+{
+  display:none;
+}
+
+
+#nav-open /*アイコンのスペース*/
+{
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+  margin:0 10px;
+}
+
+
+#nav-open span, #nav-open span:before, #nav-open span:after /*ハンバーガーアイコン*/
+{
+  position: absolute;
+  height: 3px;/*線の太さ*/
+  width: 25px;/*長さ*/
+  border-radius: 3px;
+  background: black;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+
+#nav-open span:before
+{
+  bottom: -8px;
+}
+
+#nav-open span:after
+{
+  bottom: -16px;
+}
+
+
+#nav-close /*閉じる用の薄黒カバー*/
+{
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+
+#sp-title /*中身*/
+{
+	text-align:center;
+	width: 100%;
+    background-image: url(../img/topbg.png);
+    background-position: 50% 55%;
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+    background-size: cover;
+    padding: 6.8vw 0;
+}
+
+#nav-content
+{
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;/*最前面に*/
+	width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+	max-width: 330px;/*最大幅（調整してください）*/
+	height: 100%;
+	transition: .3s ease-in-out;/*滑らかに表示*/
+	-webkit-transform: translateX(-105%);
+	transform: translateX(-105%);/*左に隠しておく*/
+}
+
+#nav-content #sp-subtitle
+{
+	text-align:center;
+	font-size: xx-small;
+	margin-top:20px;
+	color:black;
+}
+
+#nav-content h2
+{
+	text-align:center;
+}
+
+#nav-content hr
+{
+	margin:15px 0;
+}
+#nav-content li
+{
+	text-align:center;
+	margin:15px 0;
+}
+#nav-content a
+{
+	color:black;
+}
+
+
+#nav-input:checked ~ #nav-close /*チェックが入ったらもろもろ表示*/
+{
+	display: block;/*カバーを表示*/
+	opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content
+{
+	-webkit-transform: translateX(0%);
+	transform: translateX(0%);/*中身を表示（右へスライド）*/
+	box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+/*----↑↑↑ハンバーガー↑↑↑--------*/
+
+.nav .navbtn, #login-msg input
+{
+	font-weight: bold;
+	float:right;
+    display: inline-block;
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+	border-radius: 3px;
+    text-decoration: none;
+    transition: .4s;
+}
+
+#navi-sp input
+{
+	margin:3px 10px;
+	-webkit-appearance: none;
+}
+
+.nav .navbtn a, #login-msg input
+{
+    color: white;
+}
+
+
+/*ログイン後ヘッダーボタン*/
+#login-msg
+{
+	text-align:right;
+}
+
+#login-msg span
+{
+	padding-right:10px;
+	display: inline-block;
+	padding-top: 3px;
+}
+
+.navbtn:hover
+{
+	opacity:.7;
+}
+
+/*長期休業お知らせ*/
+#holidy_info
+{
+    font-size: small;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color: #58afc5;
+    border-bottom: 1px solid #fff;
+}
+
+/*--------------------------------------------------*/
+/* ナビゲーション */
+/*↓タブレット用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (min-width:768px)
+{
+
+
+	#navi-sp
+	{
+		display:none;
+	}
+
+	#navi-pc
+	{
+		display:block;
+	}
+
+	.nav
+	{
+	    margin-bottom: 0px;
+	}
+
+	.nav-contact
+	{
+		font-size:2em;
+		margin-bottom:5px;
+	}
+
+	.nav .navbtn, #login-msg input/*ヘッダーボタン*/
+	{
+	    padding: 10px 15px;
+	    margin: 9px 30px -30px 0;
+	}
+
+	.nav .navbtn,	#navi-pc form
+	{
+		position: relative;
+    	z-index: 5;
+	}
+
+	#login-msg span
+	{
+	    padding-top: 11px;
+	    font-weight:bold;
+	    color:#000033;
+	}
+
+	.nav #subtitle
+	{
+		font-size:small;
+		padding-left:20px;
+	}
+
+	.nav #title {
+	    float: left;
+	    padding-top: 20px;
+	    padding-left: 20px;
+	    width: 29%;
+	}
+
+	.nav ul {
+	    float: right;
+
+	    padding: 26px 20px 0px 17px;
+	}
+
+	.nav li
+	{
+	    float: left;
+	}
+
+	.nav li a
+	{
+	    text-decoration: none;
+	    padding: 0 5px;
+	    display: block;
+	    text-align:right;
+	    font-weight:bold;
+	}
+
+	.nav li img
+	{
+		margin-right:10px;
+	}
+
+	#list-last
+	{
+		padding:0 0 0 12px;
+	}
+
+	.nav li img
+	{
+		vertical-align: middle;
+	}
+
+	.innerspace/*内側のスペース*/
+	{
+		padding: 60px 30px;
+	}
+
+}
+
+
+/*--------------------------------------------------*/
+/* ナビゲーション */
+/*↓PC用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (min-width:920px)
+{
+	.nav li a
+	{
+	    padding: 0 12px;
+
+	}
+
+	.nav-contact
+	{
+		font-size:2.4em;
+	}
+
+	#navi-pc form
+	{
+		margin-bottom:-20px;
+	}
+
+	#navi-pc #logout
+	{
+		cursor: pointer;
+		cursor: hand;
+	}
+
+	.nav #title
+	{
+		padding-top:8px;
+		width:auto;
+	}
+
+	#title img
+	{
+		margin-top:-13px;
+	}
+
+	.nav ul
+	{
+		padding: 28px 20px 0px 20px;
+	}
+
+
+}
+
+
+
+
+
+
+
+/*==ナビゲーションここまで==================*/
+
+
+/*--------------------------------------------------*/
+/* フッター */
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+
+footer
+{
+	padding:30px 15px;
+	border-top:thin solid #c0c0c0;
+}
+
+.footer-contents
+{
+	text-align: center;
+}
+
+.sp-space
+{
+	height:20px;
+}
+
+#footer-img
+{
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#adress
+{
+	font-size:small;
+	text-align: center;
+}
+
+/*--------------------------------------------------*/
+/* フッター */
+/*↓タブレット用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (min-width:768px)
+{
+	.sp-space
+	{
+		display:none;
+	}
+
+
+	.footer-colm1
+	{
+		float:left;
+		width:60%;
+	}
+
+	.footer-colm2
+	{
+		float:left;
+		width:40%;
+		text-align:right;
+	}
+
+	.footer-contents
+	{
+		float:left;
+		width:33%;
+		text-align: left;
+	}
+
+	.footer-contents ul
+	{
+		padding-left:10%;
+	}
+
+	.footer-contents ul li a:hover
+	{
+		background-color:#F5F5F5;
+	}
+
+	#footer-img
+	{
+		margin-bottom: 20px;
+		text-align: right;
+	}
+
+	#adress
+	{
+		padding-right:15px;
+		text-align: right;
+	}
+}
+
+
+/*==フッターここまで==================*/
+
+
+/*--------------------------------------------------*/
+/* TOPへ戻るボタン */
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+.pagetop
+{
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+.pagetop a
+{
+    display: block;
+    background-color: #ccc;
+    text-align: center;
+    color: #222;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 5px 10px;
+	filter:alpha(opacity=50);
+    -moz-opacity: 0.75;
+    opacity: 0.7;
+}
+.pagetop a:hover
+{
+    background-color: #b2d1fb;
+    color: #fff;
+}
+
+/*==TOPへ戻るボタンここまで==================*/
+
+
+/*--------------------------------------------------*/
+/* 求人サービスに登録 */
+/*--------------------------------------------------*/
+
+.registbox
+{
+	background-color: rgb(88, 175, 197);
+	/* TODO image */
+	padding: 150px 30px;
+}
+
+.registtitle
+{
+	padding-bottom: 80px;
+}
+
+.registtitletext
+{
+	font-size: 2em;
+	font-weight: bold;
+	letter-spacing: 0.25em;
+	padding-bottom: 20px;
+}
+
+.registtitlenote
+{
+	font-size: 1.2em;
+	font-weight: normal;
+	letter-spacing: 0.25em;
+	padding-bottom: 20px;
+}
+
+.registbtn
+{
+/*	background: #f00;*/
+	/* TODO image */
+	display: inline-block;
+	border-radius: 20px;
+	padding: 30px 12.5em;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	transition: 0.2s all linear;
+	opacity: 1;
+}
+
+.registbtn:hover
+{
+	opacity: 0.7;
+}
+
+.registbtn::before
+{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 50%;
+	left: 6em;
+	margin-top: -1.5em;
+	display: block;
+	border-top: 1.5em solid transparent;
+	border-left: 2.828427em solid #fff;
+	border-bottom: 1.5em solid transparent;
+}
+
+.registbtn::after
+{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 50%;
+	right: 6em;
+	margin-top: -1.5em;
+	display: block;
+	border-top: 1.5em solid transparent;
+	border-right: 2.828427em solid #fff;
+	border-bottom: 1.5em solid transparent;
+}
+
+.registbtntext
+{
+	display: inline-block;
+	font-size: 2.2em;
+	font-weight: bold;
+	letter-spacing: 0.25em;
+	text-indent: 0.25em;
+	padding-bottom: 0;
+}
+
+.registbtnnote
+{
+	display: block;
+	padding-top: 16px;
+	font-size: 1em;
+	text-indent: 0.25em;
+	font-weight: normal;
+	letter-spacing: 0;
+	position: relative;
+}
+
+.registbtntel
+{
+	font-size: 2em
+}
+
+.registbtnnote::before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 7px;
+	right: 7px;
+	display: block;
+	border-top: 6px solid #fff;
+}
+
+/*--------------------------------------------------*/
+/* 求人サービスに登録 */
+/*↓スマホ用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (max-width:767px)
+{
+	.registtitletext
+	{
+		font-size: 1.4em;
+	}
+
+	.registtitlenote
+	{
+		font-size: 0.8em;
+	}
+
+	.registbtntext
+	{
+		font-size: 1.6em;
+	}
+
+	.registbtnnote
+	{
+		font-size: 0.7em;
+	}
+
+	.registbtn
+	{
+		font-size: 0.6em;
+	}
+
+}
+
+/*--------------------------------------------------*/
+/* 求人サービスに登録 */
+/*↓スマホ用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (max-width:479px)
+{
+
+	.registbox
+	{
+		padding: 50px 30px;
+	}
+
+	.registtitle
+	{
+		padding-bottom: 20px;
+	}
+
+	.registbtn
+	{
+		font-size: 0.6em;
+		padding: 30px 6em;
+	}
+
+	.registbtn::before
+	{
+		left: 2em;
+	}
+
+	.registbtn::after
+	{
+		right: 2em;
+	}
+
+	.registbtntext
+	{
+		font-size: 1.2em;
+		padding-bottom: 5px;
+	}
+
+	.registbtnnote
+	{
+		font-size: 0.3em;
+	}
+
+}
+
+
+/*--------------------------------------------------------------------------------------------------*/
+
+/* 豊富な案件＆サービスページイメージボックス */
+.descriptionboxwrap
+{
+	box-sizing: border-box;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 60px 0;
+}
+
+.descriptionboxwrap *
+{
+	box-sizing: border-box;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: normal;
+}
+
+.descriptionbox:before,
+.descriptionbox:after
+{
+	content: "";
+	display: table;
+}
+
+.descriptionbox:after
+{
+	clear: both;
+}
+
+.descriptionbox
+{
+	*zoom: 1;
+	width: 100%;
+	width: calc(100% + 60px);
+	margin-left: -30px;
+	margin-right: -30px;
+}
+
+.descriptionimageleft .descriptionimagebox
+{
+	float: left;
+}
+
+.descriptionimageleft .descriptiontextbox
+{
+	float: right;
+}
+
+.descriptionimageright .descriptionimagebox
+{
+	float: right;
+}
+
+.descriptionimageright .descriptiontextbox
+{
+	float: left;
+}
+
+.descriptionimagebox
+{
+	width:50%;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.descriptionimage
+{
+	padding-bottom: 30px;
+	max-width: 100%;
+}
+
+.descriptionimagecaption {
+	font-size: 1.8em;
+	line-height: 1;
+	letter-spacing: 0.1em;
+}
+
+.descriptiontextbox
+{
+	width:50%;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.descriptiontextheadline
+{
+	padding-bottom: 20px;
+}
+
+.headline
+{
+	display: block;
+	padding-bottom: 20px;
+}
+
+.headlineenfont
+{
+	font-size: 1.4em;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	vertical-align: middle;
+}
+
+.headlinelinefont
+{
+	font-size: 1.4em;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	vertical-align: middle;
+}
+
+.headlinekanafont
+{
+	font-size: 1.4em;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	vertical-align: middle;
+}
+
+.headlinenote
+{
+	display: block;
+	font-size: 1.1em;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	vertical-align: middle;
+}
+
+.descriptiontext
+{
+	font-size: 1.2em;
+	line-height: 2;
+	padding: 0 36px;
+	text-align: center;
+}
+
+.descriptiontextleft
+{
+	font-size: 1.2em;
+	line-height: 2;
+	padding: 0 36px;
+	text-align: left;
+}
+
+
+
+
+/*--------------------------------------------------*/
+/* 説明イメージボックス */
+/*↓タブレット用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (max-width:1259px)
+{
+	/*↓ネガティブマージン削除↓*/
+	.descriptionbox
+	{
+		width: 100%;
+		margin-left:0;
+		margin-right:0;
+	}
+
+}
+
+/*--------------------------------------------------*/
+/* 説明イメージボックス */
+/*↓タブレット用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (max-width:959px)
+{
+	/*↓フロート解除、ボックス100%↓*/
+	.descriptionimageleft .descriptionimagebox,
+	.descriptionimageleft .descriptiontextbox,
+	.descriptionimageright .descriptionimagebox,
+	.descriptionimageright .descriptiontextbox
+	{
+		float: none;
+		width: 100%;
+	}
+}
+
+/*--------------------------------------------------*/
+/* 説明イメージボックス */
+/*↓スマホ用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (max-width:767px)
+{
+	.descriptionimagecaption
+	{
+		font-size: 1.4em;
+	}
+
+	.headlineenfont,
+	.headlinelinefont,
+	.headlinekanafont
+	{
+		font-size: 1.0em;
+	}
+
+	.headlinenote
+	{
+		font-size: 0.7em;
+	}
+
+	.descriptiontext
+	{
+		font-size: 0.8em;
+	}
+}
+
+/*--------------------------------------------------*/
+/* 説明イメージボックス */
+/*↓スマホ用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (max-width:479px)
+{
+	.descriptionboxwrap
+	{
+		padding: 30px 0;
+	}
+
+	.descriptionimagecaption
+	{
+		font-size: 1.2em;
+	}
+
+	.headlineenfont,
+	.headlinelinefont,
+	.headlinekanafont
+	{
+		font-size: 0.8em;
+	}
+
+	.descriptiontext
+	{
+		padding: 0;
+	}
+}
+
+
+
+

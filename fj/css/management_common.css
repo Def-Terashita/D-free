@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+
+
+
+.table-hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+#err{
+	color:red;
+}
+.error_m{
+	color:red;
+}
+
+#success{
+	color:blue;
+}
+#user_info input{
+	width:300px;
+}
+
+#projectwrap{
+	margin-bottom:30px
+}
+
+#projectwrap .kw{
+	margin:0px 10px 0px 5px;
+	font-size: 110%;
+}
+.input_items
+{
+	font-weight:bold;
+	background: linear-gradient(transparent 60%, #ead6ff 0%);
+}
+
+#projectwrap label input
+, #projectwrap label select
+, #projectwrap label textarea
+{
+	margin-bottom:8px;
+}
+
+.list-btn
+{
+    background-color: rgb(225, 225, 225);
+    border: solid 1px rgb(147, 147, 147);
+    cursor: pointer;
+    outline: none;
+}
+
+.projectinfo th,.projectinfo td
+{
+    padding:10px;
+    border:solid 1px;
+}
+
+.projectinfo th
+{
+    background-color:#F0F0F6;
+}
+
+.projectinfo-btn td
+{
+	border-top-style:none;
+	border-right-style:none;
+    border-left-style:none;
+    border-bottom-style:none;
+}
+
+

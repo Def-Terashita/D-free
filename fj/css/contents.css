@@ -1,0 +1,1188 @@
+@charset "UTF-8";
+
+/*ユーザー側画面TOPページ以外の下層ページのcss*/
+
+/*--------------------------------------------------*/
+/*下層ページ共通*/
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+
+
+.input-errmsg
+{
+	font-size:small;
+}
+
+.tablewrap table
+{
+	text-align: left;
+	width:100%;
+	border-collapse: collapse;
+}
+
+.tablewrap th, .tablewrap td
+{
+	padding:3px;
+
+}
+.project_tablewrap th, .project_tablewrap td
+{
+	border: solid 1px #cecfd8;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+/*プレイスホルダー*/
+.form-box ::-webkit-input-placeholder
+{
+	color: #AAA;
+	text-align:left;
+}
+
+.form-box :-moz-placeholder
+{ /* Firefox 18- */
+	color: #AAA;
+	text-align:left;
+}
+
+.form-box ::-moz-placeholder
+{  /* Firefox 19+ */
+	color: #AAA;
+   text-align:left;
+}
+
+.form-box :-ms-input-placeholder
+{
+	color: #AAA;
+	text-align:left;
+}
+
+.title-arrow
+{
+	position: relative;
+	padding-left: 25px;
+	font-size: 14px;
+}
+
+.title-arrow:before
+{
+	position: absolute;
+	content: '';
+	bottom: -3px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border: none;
+	border-left: solid 15px transparent;
+
+}
+.title-arrow:after
+{
+	position: absolute;
+	content: '';
+	bottom: -3px;
+	left: 10px;
+	width: 100%;
+
+}
+
+
+/*--------------------------------------------------*/
+/*下層ページ共通*/
+/*↓タブレット用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+
+
+@media screen and (min-width:768px)
+{
+	.title-arrow
+	{
+		font-size: 1.7em;
+	}
+	.tablewrap
+	{
+		padding:16px;
+	}
+
+	.tablewrap th, .tablewrap td
+	{
+		padding:10px;
+	}
+
+	.tablewrap th
+	{
+		width:20%;
+	}
+
+	.tablewrap td
+	{
+		width:80%;
+	}
+
+	.form-comp-wrap
+	{
+		width:80%;
+		margin:0 auto;
+	}
+
+	.form-comp
+	{
+		width:40%;
+		float:left;
+		margin:10px;
+	}
+
+}
+
+/*--------------------------------------------------*/
+/*下層ページ共通*/
+/*↓PC用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (min-width:1025px)
+{
+
+	.subpage-contentswrap
+	{
+		padding: 60px 124px;
+	}
+
+}
+
+/*--------------------------------------------------*/
+/* 案件情報一覧ページ */
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+
+
+.project_listbox
+{
+	text-align:left;
+	margin:30px auto;
+	border-radius:4px;
+	padding:16px 24px;
+}
+.project_member span
+{
+	font-weight:bold;
+	font-size:large;
+	border-bottom: 1px solid rgb(232, 5, 58);
+	line-height: 1.6em;
+}
+ 
+
+
+.project_listbtn
+{
+	text-align:left;
+	transition: .3s ease-in-out;
+	cursor:pointer;
+}
+.project_listbtn a
+{
+	color:#0000ff;
+	font-weight:bold;
+	font-size:large;
+	border-bottom: solid 1px #0000ff;
+	line-height: 1.6em;
+}
+.project_listbtn_member a
+{
+	color:rgb(232, 5, 58);
+	border-bottom: solid 1px rgb(232, 5, 58);
+}
+
+.page-btn
+{
+	display:inline-block;
+	text-decoration:none;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:3px;
+	border:none;
+	position:relative;
+	cursor:pointer;
+	margin:10px 10px 0 0;
+	vertical-align: middle;
+	font-weight:bold;
+	transition: .3s ease-in-out;
+}
+
+.page-btn
+{
+	padding:2px 7px;
+}
+
+.page-btn:hover
+{
+	opacity: 0.7;
+	color:#fff;
+}
+
+.page-btn-select
+{
+	padding:6px;width:200px;
+}
+
+.page-btn-sort
+{
+	padding:5px 7px;
+	-webkit-appearance:none;
+}
+#sortbox_select select::-ms-expand {
+    display: none;
+}
+
+#sort-box
+{
+	margin:20px 0;
+}
+#sortbox_select select
+{
+	-webkit-appearance:none;
+}
+#sortbox_select
+{
+	position:relative;
+}
+#sortbox_select::after
+{
+    position: absolute;
+    content: "▼";
+    top: 7px;
+    right: 23px;
+    color: #fff;
+    pointer-events: none;
+}
+
+.listbox_post_date
+{
+	font-size:small;
+	padding-left:8px;
+}
+
+.project_text_continue
+{
+  overflow: hidden; 
+  max-height: 120px;
+  max-width:100%;
+}
+.project_content a
+{
+	color: #0000ff;
+    border-bottom: solid 1px #0000ff;
+    line-height: 1.6em;
+}
+
+
+/*--------------------------------------------------*/
+/* 案件情報一覧ページ */
+/*↓タブレット用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+
+@media screen and (min-width:768px)
+{
+	#pc-sort
+	{
+		float:left;
+	}
+
+	#pc-reset
+	{
+		float:right;
+	}
+	.listbox_post_date
+	{
+		float:right;
+	}
+
+	.project_member, .project_listbtn
+	{
+		max-width:82%;
+	}
+
+
+}
+
+/*==案件情報一覧ページここまで==================*/
+
+
+
+
+/*--------------------------------------------------*/
+/* 案件詳細ページ */
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+
+.project_detailbox
+{
+	text-align:left;
+	margin: 0 auto 30px auto;
+	padding:16px;
+	border-radius:4px;
+}
+
+.project_info
+{
+	margin-top:16px;
+	padding:0 16px;
+}
+
+.project_content
+{
+	margin-top:16px;
+	padding:16px;
+	border-radius:4px;
+	word-wrap: break-word;
+}
+
+.tablewrap
+{
+	margin-top:16px;
+	padding:8px;
+	border-radius:4px;
+}
+
+.project_detailbox .project_subject
+{
+	font-size:large;
+	font-weight:bold;
+}
+
+.project_detailbox .project_price
+{
+	margin:16px 0;
+}
+
+.project_detailbox .project_price span
+{
+
+	font-size:large;
+	font-weight:bold;
+	color:#ff003b;
+}
+
+.project_detail_title, .project_detail_content
+{
+	padding:5px 10px;
+}
+
+.project_detail_title
+{
+	font-weight:bold;
+}
+.project_detail_content
+{
+	border-right: solid 1px rgba(6,8,56,0.19);
+	border-left: solid 1px rgba(6,8,56,0.19);
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.project_detail_content:last-child
+{
+	border-bottom: solid 1px rgba(6,8,56,0.19);
+}
+
+
+
+/*--------------------------------------------------*/
+/* 案件詳細ページ */
+/*↓タブレット用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+
+@media screen and (min-width:768px)
+{
+
+	.project_detailbox
+	{
+		padding:16px 24px;
+		margin:30px auto;
+	}
+
+	.project_detailbox .project_subject
+	{
+		float:left;
+		font-size:x-large;
+		width: 82%;
+	}
+
+	.project_detailbox .project_id
+	{
+		float: right;
+	}
+
+	.project_price
+	{
+		padding-left: 16px;
+	}
+
+	.project_detailbox .project_price span
+	{
+		font-size:x-large;
+	}
+
+	.tablewrap
+	{
+		padding:16px;
+	}
+
+	.tablewrap th, .tablewrap td
+	{
+		padding:10px;
+	}
+
+	.tablewrap th
+	{
+		width:20%;
+	}
+
+	.tablewrap td
+	{
+		width:80%;
+	}
+
+
+}
+
+/*==案件詳細ページここまで==================*/
+
+
+/*--------------------------------------------------*/
+/* お問い合わせ入力ページ */
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+
+
+
+.form
+{
+	padding: 0px 8px 30px 8px;
+}
+.form .title-arrow:before
+{
+	border-bottom: solid 15px #2b4c72;
+}
+ .form .title-arrow:after
+{
+ 	border-bottom: solid 3px #2b4c72;
+}
+
+.form-box input
+{
+	width:auto;
+    border: solid 1px #808080;
+    height:30px;
+}
+
+
+.form_tablewrap th, .form_tablewrap td
+{
+	border: solid 1px #e0dfdf;
+}
+
+.form_tablewrap th
+{
+	background-color: rgb(49, 71, 197);
+	color:#fff;
+}
+
+#form-subject
+{
+	border: solid 1px #808080;
+	height: 32px;
+	width:100%;
+}
+
+#form-content
+{
+	border: solid 1px #808080;
+	width:100%;
+	height:200px;
+	resize: none;
+}
+
+
+/*--------------------------------------------------*/
+/* お問い合わせ入力ページ */
+/*↓タブレット用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+
+@media screen and (min-width:768px)
+{
+
+	.from-box
+	{
+		text-align:center;
+		width: 80%;
+	}
+
+
+	.form-box table
+	{
+		text-align:left;
+		margin:0 auto;
+	}
+
+	.form_tablewrap th
+	{
+		width:30%;
+	}
+	.form-box .form_tablewrap input
+	{
+		width:100%;
+	}
+
+
+}
+/*--------------------------------------------------*/
+/* お問い合わせ入力ページ */
+/*↓PC用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (min-width:1025px)
+{
+
+	.form
+	{
+		padding: 60px 124px;
+	}
+
+}
+/*==お問い合わせ入力ページここまで==================*/
+
+
+
+/*--------------------------------------------------*/
+/* 新規会員登録入力ページ */
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+.newmember_info
+{
+	font-size:small;
+	color:rgb(117, 116, 116);
+}
+
+.newmember
+{
+    padding: 0px 8px 30px 8px;
+}
+.newmember .title-arrow:before
+{
+	border-bottom: solid 15px #3147c5;
+}
+ .newmember .title-arrow:after
+{
+ 	border-bottom: solid 3px #3147c5;
+}
+.newmember_tablewrap th, .newmember_tablewrap td
+{
+	border: solid 1px #e0dfdf;
+}
+
+.newmember_tablewrap th
+{
+	background-color:#3147c5;
+	color:#fff;
+}
+
+.newmember_tablewrap label{
+  display:block;
+  position:relative;
+  padding-left:1em;
+}
+.newmember_tablewrap label input[type=checkbox]
+,.newmember_tablewrap label input[type=radio]{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+}
+/*--------------------------------------------------*/
+/* 新規会員登録入力ページ */
+/*↓タブレット用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+
+@media screen and (min-width:768px)
+{
+
+	.newmember
+	{
+		padding: 30px 8px;
+	}
+	.newmember_tablewrap th
+	{
+		width:45%;
+	}
+	.form-box .newmember_tablewrap input
+	{
+		width:100%;
+	}
+	.newmember_tablewrap input[type=checkbox] 
+	,.newmember_tablewrap label input[type=radio]
+	{
+		width:auto;
+	}
+
+
+}
+/*--------------------------------------------------*/
+/* 新規会員登録入力ページ */
+/*↓PC用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (min-width:1025px)
+{
+
+	.newmember
+	{
+		padding: 60px 124px;
+	}
+
+
+
+
+}
+
+
+
+
+/*==新規会員登録入力ページここまで==================*/
+
+
+/*--------------------------------------------------*/
+/* 新規会員登録確認登録ページ */
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+
+#membercomp
+{
+	margin-top:16px;
+	padding:16px 16px 0 16px ;
+}
+
+
+/*==新規会員登録確認登録ページここまで==================*/
+
+
+
+
+
+/*--------------------------------------------------*/
+/* ログインページ */
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+
+.loginbox
+{
+	padding:8px 0;
+    margin: 0 auto;
+    border-radius: 8px;
+	border: solid 3px #fff;
+}
+
+.loginbox-input
+{
+    border-radius: 3px;
+    height:30px;
+    width:64%;
+}
+
+.logintitle
+{
+	padding:8px 0;
+}
+
+.loginbox-btn
+{
+    border: solid 2px #cbbc17;
+    font-weight: bold;
+    font-size:large;
+    width:65%;
+    -webkit-appearance:none;
+}
+
+.loginbox-btn:hover
+{
+	border: solid 2px #fff;
+
+}
+
+.newmember-link
+{
+	margin-top:10px;
+}
+
+/*プレイスホルダー*/
+.loginbox ::-webkit-input-placeholder
+{
+	color: #AAA;
+	text-align:center;
+}
+
+.loginbox :-moz-placeholder
+{ /* Firefox 18- */
+	color: #AAA;
+	text-align:center;
+}
+
+.loginbox ::-moz-placeholder
+{  /* Firefox 19+ */
+	color: #AAA;
+   text-align:center;
+}
+
+.loginbox :-ms-input-placeholder
+{
+	color: #AAA;
+	text-align:center;
+}
+
+
+
+
+
+
+/*--------------------------------------------------*/
+/* ログインページページ */
+/*↓タブレット用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+
+@media screen and (min-width:768px)
+{
+	.loginbox
+	{
+    	width: 80%;
+	}
+
+}
+
+/*--------------------------------------------------*/
+/* ログインページページ */
+/*↓PC用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (min-width:1025px)
+{
+
+	.loginbox
+	{
+	    width: 32%;
+	}
+
+}
+
+
+
+/*==ログインページここまで==================*/
+
+
+/*--------------------------------------------------*/
+/* 会社概要ページ */
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+
+
+
+.companyimg
+{
+	max-width:100%;
+	margin:30px auto;
+}
+.companyimg img
+{
+	text-align:center;
+	max-width:100%;
+}
+
+.companynote{
+	/*width:90%;*/
+	margin:0 auto;
+}
+
+
+.company_tablewrap th, .company_tablewrap td
+{
+	border: solid 1px #e0dfdf;
+}
+
+.company_tablewrap th
+{
+	background-color:#c3c3c3;
+	color:#fff;
+}
+
+
+#map
+{
+	position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+#map iframe,#map object,#map embed
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*--------------------------------------------------*/
+/* 会社概要ページ */
+/*↓タブレット用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+
+@media screen and (min-width:768px)
+{
+	.companyimg
+	{
+		float:left;
+		margin:0 2em 1em 0;
+	}
+
+	.companywrap
+	{
+		padding:32px 16px 16px 16px;
+	}
+
+	.companynote
+	{
+		width:100%;
+		font-size: 1.1em;
+		font-weight: normal;
+		letter-spacing: 0.1em;
+		vertical-align: middle;
+	}
+
+	#map
+	{
+	    padding-bottom: 32%;
+	}
+
+}
+
+/*==会社概要ページここまで==================*/
+
+
+/*--------------------------------------------------*/
+/* プライバシーポリシ */
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+
+
+.privacypolicynote
+{
+	width:100%;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	vertical-align: middle;
+	padding: 10px 0px;
+}
+
+.privacypolicy h2
+{
+	padding: 0.25em 0.5em;/*上下 左右の余白*/
+	background: transparent;/*背景透明に*/
+	border-left: solid 8px #1c96de;/*左線*/
+
+}
+
+
+/*==プライバシーポリシここまで==================*/
+
+
+
+
+/****以下篠原さん*********************************************************/
+
+/* メインイメージ */
+.sectionmainview
+{
+	width: 100%;
+	background-image: url(../img/contents_top.png);
+	background-position: 50% 55%;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	background-size: cover;
+	padding: 6.8vw 0;
+
+}
+
+.mainvisual
+{
+	color: #fff;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.mainvisual a
+{
+	color: #fff;
+}
+
+.mainvisualenfont
+{
+	font-size: 2.4em;
+	letter-spacing: 0.2em;
+}
+
+.mainvisuallinefont
+{
+	font-size: 2.4em;
+	font-weight: normal;
+	vertical-align: -0.1em;
+	padding-right: 13px;
+}
+
+.mainvisualkanafont
+{
+	font-size: 2.0em;
+	letter-spacing: 0.3em;
+}
+
+.mainvisualnotefont
+{
+	font-size: 1.3em;
+	font-weight: normal;
+	letter-spacing: 0.4em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/*--------------------------------------------------*/
+/* メインイメージ */
+/*↓スマホ用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (max-width:767px)
+{
+	.mainvisualenfont,
+	.mainvisuallinefont
+	{
+		font-size: 1.8em;
+	}
+
+	.mainvisualkanafont
+	{
+		font-size: 1.6em;
+	}
+
+	.mainvisualnotefont
+	{
+		font-size: 0.9em;
+	}
+}
+
+/*--------------------------------------------------*/
+/* メインイメージ */
+/*↓スマホ用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (max-width:479px)
+{
+	.mainvisualenfont,
+	.mainvisuallinefont
+	{
+		font-size: 1.2em;
+	}
+
+	.mainvisualkanafont
+	{
+		font-size: 1.0em;
+	}
+
+	.mainvisualnotefont
+	{
+		font-size: 0.5em;
+	}
+}
+
+
+/*==FAQページ==================*/
+.questionbox
+{
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+
+.questionbox *
+{
+	box-sizing: border-box;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: normal;
+}
+
+.questionlist
+{
+	padding: 0 0 60px;
+}
+
+.questiondescriptionterm:before,
+.questiondescription:before,
+.questiondescriptionterm:after,
+.questiondescription:after
+{
+	content: "";
+	display: table;
+}
+
+.questiondescriptionterm:after,
+.questiondescription:after
+{
+	clear: both;
+}
+
+.questiondescriptionterm,
+.questiondescription
+{
+	*zoom: 1;
+	padding: 0 60px;
+}
+
+.questiondescriptioninner
+{
+	background: #fff;
+	border-radius: 20px;
+	display: inline-block;
+	padding: 20px 30px;
+	max-width: 90%;
+	box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.4);
+	margin-bottom: 20px;
+	position: relative;
+	text-align: left;
+	line-height: 1.75;
+}
+
+.questiondescriptionterm .questiondescriptioninner
+{
+	float: left;
+}
+
+.questiondescriptionterm .questiondescriptioninner:before
+{
+	content: "Q";
+	font-size: 2em;
+	line-height: 1;
+	font-weight: bold;
+	position: absolute;
+	left: -1.5em;
+	top: 7px;
+}
+
+.questiondescriptionterm .questiondescriptioninner:after
+{
+	content: "";
+	position: absolute;
+	left: -0.9em;
+	top: 15px;
+	width: 0;
+	height: 0;
+	border-top: 0.25em solid transparent;
+	border-right: 1em solid #fff;
+	border-bottom: 0.25em solid transparent;
+}
+
+.questiondescription .questiondescriptioninner
+{
+	float: right;
+}
+
+.questiondescription .questiondescriptioninner:before
+{
+	content: "A";
+	font-size: 2em;
+	line-height: 1;
+	font-weight: bold;
+	position: absolute;
+	right: -1.5em;
+	top: 7px;
+}
+
+.questiondescription .questiondescriptioninner:after
+{
+	content: "";
+	position: absolute;
+	right: -0.9em;
+	top: 15px;
+	width: 0;
+	height: 0;
+	border-top: 0.25em solid transparent;
+	border-left: 1em solid #fff;
+	border-bottom: 0.25em solid transparent;
+}
+
+/*--------------------------------------------------*/
+/* FAQページ */
+/*↓スマホ用の追加・変更デザイン↓*/
+/*--------------------------------------------------*/
+@media screen and (max-width:767px)
+{
+	.questionbox
+	{
+		margin-top:30px;
+	}
+	.questiondescriptionterm,
+	.questiondescription
+	{
+		padding: 30px 0;
+	}
+
+	.questiondescriptionterm .questiondescriptioninner:before
+	{
+		left: 7px;
+		top: -1.5em;
+	}
+
+	.questiondescriptionterm .questiondescriptioninner:after
+	{
+		left: 15px;
+		top: -0.9em;
+		border-left: 0.25em solid transparent;
+		border-bottom: 1em solid #fff;
+		border-right: 0.25em solid transparent;
+		border-top: 0 none transparent;
+	}
+
+	.questiondescription .questiondescriptioninner:before
+	{
+		right: 7px;
+		top: -1.5em;
+	}
+
+	.questiondescription .questiondescriptioninner:after
+	{
+		right: 15px;
+		top: -0.9em;
+		border-left: 0.25em solid transparent;
+		border-bottom: 1em solid #fff;
+		border-right: 0.25em solid transparent;
+		border-top: 0 none transparent;
+	}
+
+
+}
+
+/*--------------------------------------------------*/
+/* 口コミページ */
+/*↓モバイル～すべてのデバイスで共通の設定↓*/
+/*--------------------------------------------------*/
+.voice_listbox
+{
+	text-align:left;
+	margin:30px auto;
+	border-radius:4px;
+	padding:16px 24px;
+}
+.engineer
+{
+	font-weight:bold;
+}
+.engineer img
+{
+	padding: 0 10px 3px 0;
+}
+.voice
+{
+	margin-top:16px;
+	padding:0 16px;
+}

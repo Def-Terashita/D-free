@@ -1,0 +1,39 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+
+
+
+<IfModule mod_rewrite.c>
+#RewriteEngine on
+#Redirect permanent /it/index.html https://www.freelance-jobs.jp/index.php
+#Redirect permanent /it/service.html https://www.freelance-jobs.jp/contents/service.php
+#Redirect permanent /it/aboutus.html https://www.freelance-jobs.jp/contents/question.php
+#Redirect permanent /it/company.html https://www.freelance-jobs.jp/contents/company.php
+#RewriteCond %{HTTP_HOST} ^(freelance-jobs\.jp) [NC]
+#RewriteRule ^(.*) https://www.freelance-jobs.jp/$1 [R=301,L]
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
